@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
@@ -32,7 +32,126 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/*  */
+
+:root {
+  --black: #1d1d1f;
+  --white: #f5f5f7;
+  --pink: #ff0050;
+  --aqua: #00f2ea;
+  color: var(--white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.8px;
+  overflow: hidden;
+}
+
+.background {
+  background-color: var(--black);
+  margin: 0;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#landing-container,
+#loading-container {
+  height: 100vh;
+  flex-direction: column;
+}
+
+.landing-title {
+  font-size: 48px;
+}
+
+#drop-zone {
+  border: 2px solid var(--white);
+  border-radius: 12px;
+  padding: 15%;
+  background-color: #353538;
+  height: 10%;
+  margin-top: 16px;
+}
+
+#drop-zone:hover {
+  background-color: #404042;
+}
+
+#loading-container {
+  display: none;
+}
+
+#stats-container {
+  height: 100vh;
+  flex-direction: column;
+}
+
+.stats-border {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--white);
+  border-right: 2px solid var(--white);
+  width: 35%;
+  margin-bottom: 50px;
+}
+
+.stats-items {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+#wrapped-button {
+  outline: 1px solid var(--white);
+  background-color: var(--pink);
+  border-radius: 12px;
+  padding: 10px;
+  outline-offset: 4px;
+
+}
+
+#wrapped-button:hover {
+  opacity: 0.85;
+  outline-offset: 6px;
+}
+
+#clear-data-button {
+  font-size: 12px;
+  padding-top: 4px;
+}
+
+#clear-data-button:hover {
+  text-decoration: underline;
+}
+
+#clear-data-button:hover,
+#wrapped-button:hover {
+  cursor: pointer;
+
+}
+
+#wrapped-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: yellowgreen;
+  height: 100vh
+}
+
+#wrapped-title {
+  flex: 1;
+}
+
+#wrapped-content {
+  flex: 1;
 }
